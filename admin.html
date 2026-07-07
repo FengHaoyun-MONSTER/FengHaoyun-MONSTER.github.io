@@ -26157,22 +26157,22 @@ IP区间:
 				subDiv.style.padding = '10px';
 				subDiv.style.borderRadius = '8px';
 				
-				const linkUrl = \`https://\${window.location.host}/sub?token=\${sub.token}\`;
+				const linkUrl = `https://${window.location.host}/sub?token=${sub.token}`;
 				
-				subDiv.innerHTML = \`
+				subDiv.innerHTML = `
 					<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-						<strong style="font-size: 16px;">\${sub.name}</strong>
-						<span style="font-size: 12px; color: \${statusColor};">\${isExpired ? '已过期' : '生效中'} | 过期: \${expireText}</span>
+						<strong style="font-size: 16px;">${sub.name}</strong>
+						<span style="font-size: 12px; color: ${statusColor};">${isExpired ? '已过期' : '生效中'} | 过期: ${expireText}</span>
 					</div>
 					<div class="input-wrapper subscription-link-wrapper">
-						<input type="text" value="\${linkUrl}" readonly>
+						<input type="text" value="${linkUrl}" readonly>
 						<div class="btn-container">
-							<button type="button" class="btn btn-qrcode" onclick="showQRCodeForLink('\${linkUrl}')">📱二维码</button>
-							<button type="button" class="btn btn-primary" onclick="copyTextToClipboard('\${linkUrl}')">复制</button>
-							<button type="button" class="btn btn-danger" style="background: #ff4d4f; color: #fff; border-color: #ff4d4f;" onclick="deleteSubLink('\${sub.id}')">删除</button>
+							<button type="button" class="btn btn-qrcode" onclick="showQRCodeForLink('${linkUrl}')">📱二维码</button>
+							<button type="button" class="btn btn-primary" onclick="copyTextToClipboard('${linkUrl}')">复制</button>
+							<button type="button" class="btn btn-danger" style="background: #ff4d4f; color: #fff; border-color: #ff4d4f;" onclick="deleteSubLink('${sub.id}')">删除</button>
 						</div>
 					</div>
-				\`;
+				`;
 				container.appendChild(subDiv);
 			});
 		}
