@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: https://FengHaoyun-MONSTER.github.io/sitemap.xml
